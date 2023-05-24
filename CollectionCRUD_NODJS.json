@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "5760fde4-6880-413c-879f-63cdda263f8e",
+		"name": "Study - NodeGoose",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21161036"
+	},
+	"item": [
+		{
+			"name": "ROTA TESTE",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cria pessoa",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Meneghel\",\r\n    \"salary\": 100000,\r\n    \"approved\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/person",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resgata pessoas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/person",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"person"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualiza pessoa",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Guilherme Teste att\",\r\n    \"salary\": 9000,\r\n    \"approved\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{URL}}/person/646c39b2799e89a14cbc104b",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"person",
+						"646c39b2799e89a14cbc104b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Resgata pessoas por ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/person/646c39b2799e89a14cbc104b",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"person",
+						"646c39b2799e89a14cbc104b"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Removendo pessoa",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{URL}}/person/646ca42e9db654b8b7fda1b9",
+					"host": [
+						"{{URL}}"
+					],
+					"path": [
+						"person",
+						"646ca42e9db654b8b7fda1b9"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "URL",
+			"value": "http://localhost:3000",
+			"type": "string"
+		}
+	]
+}
